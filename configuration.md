@@ -33,7 +33,10 @@ Help run the AI Buddy project end-to-end: discovery, delivery, governance, stake
 
 ## Project Status Overview
 
-- Current Phase: Pilot on full WWF faculty; onboarding 1 new study program.
+### Previous Phase
+The project was started in March 2015. A first pilot version, AI Buddy 1.0, has been deployed with a limited scope (only for to 2 study programs (finance and informatic)  from one faculty (the faculty of economy and informatic) and only for students of the first and third semester. 
+### Current Phase
+      - the implementation of a new pilot version, AI Buddy 2.0, is on going with on full WWF faculty; onboarding 1 new study program.
 - Target Segment: Bachelor and Master students of the WWF Faculty.
 - Top Priority: Release AI Buddy 2.0 (Study Planning Assistant MVP) by February 15th.
 
