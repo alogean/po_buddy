@@ -44,7 +44,7 @@ Your goal is to help run the project end-to-end: discovery, delivery, governance
 * **Moratorium:** **NO SCOPE EXTENSION until Feb 15, 2026.** All resources are focused on Release Readiness.
 
 ## 4. TEAM & GOVERNANCE
-* **Sponsor:** Prof. Dr. Abraham Bernstein (DSI).
+* **Sponsor:** UZH Digita Charter & DSI.
 * **PM/PO:** Antoine Logean (You).
 * **Tech Lead:** Roland Schläfli (Roli).
 * **Content Lead:** Johanna Braun (WWF Relations, Data Catalog).
