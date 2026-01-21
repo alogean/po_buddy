@@ -62,6 +62,7 @@ This GPT references the following official PMI materials to provide accurate and
 #####################################################################################
 
 ## Introduction & Goals
+========================
 
 - Project: AI Buddy - A conversational AI assistant for students at the University of Zurich (UZH).
 - Vision: To be a helpful, centralized guide for students regarding their studies, student life, and administrative processes, incorporating advanced AI capabilities and personalization over time.
@@ -74,7 +75,9 @@ This GPT references the following official PMI materials to provide accurate and
 January is about user testing and iterative refinement
  
 
-## Target Audience of AI Buddy 2.0 
+## Target Audience of AI Buddy 2.0
+===================================
+
 Full WWF faculty:
 - DF Banking and Finance 
 - DBA Business Administration 
@@ -85,6 +88,7 @@ For Bachelor and Master students
  
 
 ## Project Execution Approach
+===================================
 
 ### Methodology
 This project will be executed using an agile-oriented approach, planning work in approximate one to two-week sprint cycles.
@@ -109,76 +113,81 @@ Close collaboration, regular communication, and shared understanding between bot
 Work happens in an agile manner in sprints (3 weeks) with a sprint backlog based on the technical/product backlogs. Sprint backlogs are created in collaboration between PO/TL.
 
 ## Key Features for the AI Buddy 2.0
+====================================
 
-### In Scope
+### Functional features
 
-Course Information Hub
+(F_1) Course Information Hub
+      - Display relevant Econ/Info courses based on processed VVZ export.
+      - For each course, show key details: Official description, ECTS credits, dependencies (derived from KG), lecture/tutorial schedule, and exam date. (Dependency: Successful VVZ export and parsing).
+      - Implement basic search/filtering capabilities (name, keyword).
+      - (?) Enhance filtering by time slots like "Monday Morning". (Dependency: Structured schedule data).
 
-  - Display relevant Econ/Info courses based on processed VVZ export.
-  - For each course, show key details: Official description, ECTS credits, dependencies (derived from KG), lecture/tutorial schedule, and exam date. (Dependency: Successful VVZ export and parsing).
-  - Implement basic search/filtering capabilities (name, keyword).
-  - (?) Enhance filtering by time slots like "Monday Morning". (Dependency: Structured schedule data).
+(F_2) Study Regulation & Process Guidance
+      - Ingest key study regulations (PDFs/Text) for full WWF faculty . Implement RAG for Q&A.
+      - Implement an automated ingestion pipeline for selected UZH websites to enable RAG-based Q&A.
+          - Include capability for periodic data refresh.
+          - Targeted content includes:
+            - FAQs,
+            - process descriptions (module booking, enrollment),
+            - IT info,
+            - general exam periods/rules (APN_04),
+            - key health/support service descriptions (IS_07),
+            - and potentially basic campus building info (IS_01).
+      - Provide curated links to official UZH pages for critical deadlines and procedures.
+      - Outdated information will be included but will be communicated back to the source (we are not responsible for the content)
 
-Study Regulation & Process Guidance
-  - Ingest key study regulations (PDFs/Text) for full WWF faculty . Implement RAG for Q&A.
-  - Implement an automated ingestion pipeline for selected UZH websites to enable RAG-based Q&A.
-      - Include capability for periodic data refresh.
-      - Targeted content includes:
-        - FAQs,
-        - process descriptions (module booking, enrollment),
-        - IT info,
-        - general exam periods/rules (APN_04),
-        - key health/support service descriptions (IS_07),
-        - and potentially basic campus building info (IS_01).
-  - Provide curated links to official UZH pages for critical deadlines and procedures.
-  - Outdated information will be included but will be communicated back to the source (we are not responsible for the content)
+(F_3) University Service & Resource Locator
+        - Provide information, direct links, and RAG-based Q&A (using scraped web data, see 5.2) for key UZH resources, including:
+            - IT and support services (OLAT, VPN, Mail, etc. - IS_06).
+            - Health and counseling services (IS_07).
+            - Official tutoring and mentoring programs (IS_05).
+            - (OS) Official campus maps and building directories (IS_01).MCP: Rooms / uniability API
+    - Primary student associations (Fachvereine) for Econ and Info (IS_04).
 
-University Service & Resource Locator
-- Provide information, direct links, and RAG-based Q&A (using scraped web data, see 5.2) for key UZH resources, including:
-    - IT and support services (OLAT, VPN, Mail, etc. - IS_06).
-    - Health and counseling services (IS_07).
-    - Official tutoring and mentoring programs (IS_05).
-    - (OS) Official campus maps and building directories (IS_01).MCP: Rooms / uniability API
-- Primary student associations (Fachvereine) for Econ and Info (IS_04).
+### Non-functional features
 
-### Out of Scope for AI Buddy 2.0
+NF_1) Data Sources Management
+    - Course Data: Export from UZH VVZ (includes schedule, exam dates). Requires significant cleaning, parsing, and validation effort (P0 Milestone).
+    - Course Data: Manual enrichment with topics/competencies (potential for AI assist) (P1). Transformation into a Knowledge Graph
+    - Regulations/Process/Support Info: Manually selected PDFs/Text + Automated scraping of selected UZH web pages via pipeline
 
-Personalized Study Plan Proposal
+NF_2) Privacy & Security
+    - Adhere to UZH data privacy guidelines:
+        - Minimize collection and storage of personal data. 
+        - Implement clear user consent mechanism for storing any personalized data. 
+        - Provide user interface for viewing/managing stored data _(linked to persistent memory implementation)_.
+    - Secure authentication via UZH's Microsoft Entra ID.
+    - Standard security practices (input sanitization, dependency scanning, secure configuration).
+    - User Data & Memory 
+        - Requires careful design for storing user preferences and manually entered data respecting privacy (P1/P2 depending on persistence). 
+        - Needs investigation regarding PII removal (P0) and temporary vs. persistent storage. API connection for official data is a stretch goal
+
+### Optional
+
+F_4) Advanced Agent Capabilities [P1 Memory/Artifacts, P2 Explore]
+    - Implement agentic memory (e.g., Mem0) to recall context within a user session, potentially persisting manually entered data like "completed courses" if privacy-compliant storage (incl. consent & management UI) is feasible within P1 timeframe.
+    - Integrate capability to generate useful "artifacts" (well-formatted Markdown/HTML) based on conversation (e.g., summary of plan, course list).
+    - Explore integration of generic MCPs for specific tasks (e.g., to fetch event data or current thesis proposal topics, jobs, ...).
+    - Generating simple visualizations (e.g., OpenAI Image Generation, Mermaid/SVG).
+    
+## Key Features for the AI Buddy 3.0 (September 2026)
+====================================
+
+F_5) Support of new faculties/study programs
+
+F_4) Personalized Study Plan Proposal
   - Generate a proposed study plan based on user inputs, official regulations, course catalog, and core dependencies (from KG). Clearly label as a proposal. (High Complexity Milestone).
   - Validate the proposed plan against known core requirements and dependencies.
   - Highlight potential time schedule overlaps and exam date overlaps within the proposed plan. (Dependency: Accurate schedule/exam data).
   - Allow users to manually mark courses as "completed" or express preferences, storing this information in agentic memory (see 5.5, potentially session-based initially) to refine future proposals.
   - Display curated competencies/topics associated with courses.
-
   - MCP: Mensa
   - MCP: ASVZ
 
-
-
-
- 
-
-
- 
-
-### Advanced Agent Capabilities [P1 Memory/Artifacts, P2 Explore]
-- (?) Implement agentic memory (e.g., Mem0) to recall context within a user session, potentially persisting manually entered data like "completed courses" if privacy-compliant storage (incl. consent & management UI) is feasible within P1 timeframe.
-- (?) Integrate capability to generate useful "artifacts" (well-formatted Markdown/HTML) based on conversation (e.g., summary of plan, course list).
-- (?) Explore integration of generic MCPs for specific tasks (e.g., to fetch event data or current thesis proposal topics, jobs, ...).
-- (?) Generating simple visualizations (e.g., OpenAI Image Generation, Mermaid/SVG).
- 
-
-### Data Sources Management, Privacy & Security
-- (IS) Course Data: Export from UZH VVZ (includes schedule, exam dates). Requires significant cleaning, parsing, and validation effort (P0 Milestone). - - (?) Manual enrichment with topics/competencies (potential for AI assist) (P1). Transformation into a Knowledge Graph (specific graph DB TBD) (P0 for core structure, P1 refinement).
-- (IS) Regulations/Process/Support Info: Manually selected PDFs/Text + Automated scraping of selected UZH web pages via pipeline (see 5.2) (P0).
-- (?) User Data & Memory: Requires careful design for storing user preferences and manually entered data respecting privacy (P1/P2 depending on persistence). Needs investigation regarding PII removal (P0) and temporary vs. persistent storage. API connection for official data is a stretch goal (see 12).
-
-Privacy & Security
-- (OS) Implement PII removal using tools like LLM Guard or similar. Apply both on the frontend (potential in-browser rewriting) and backend (before logging or sending to cloud LLMs).
-- (?) Use local LLMs hosted within AKS for initial query categorization (sensitive vs. non-sensitive) and potentially handling sensitive queries directly.
-- (?) Adhere to UZH data privacy guidelines. Minimize collection and storage of personal data. Implement clear user consent mechanism for storing any personalized data. Provide user interface for viewing/managing stored data _(linked to persistent memory implementation)_.
-- (?) Secure authentication via UZH's Microsoft Entra ID.
-- (?) Standard security practices (input sanitization, dependency scanning, secure configuration).
+N_2) Privacy & Security
+    - Implement PII removal using tools like LLM Guard or similar. Apply both on the frontend (potential in-browser rewriting) and backend (before logging or sending to cloud LLMs).
+    - (?) Use local LLMs hosted within AKS for initial query categorization (sensitive vs. non-sensitive) and potentially handling sensitive queries directly.
 
 ## Key Risks and Mitigations
 
@@ -205,3 +214,10 @@ Mitigation:
 Description: 
 Mitigation: 
 
+## ToDo
+
+### Communication
+- as the new year is starting send a short thank-you message to all stackholders that have helped and support the AI Buddy project. The message should be short and inspiring. Give them of very short summary of what has been accomplished and what we plan to do this year
+- as the new year is starting send a short thank-you message to all stackholders that have helped and support the AI Buddy project. The message should be short and inspiring. Give them of very short summary of what has been accomplished and what we plan to do this year
+- 
+### Release communication plan
