@@ -214,10 +214,21 @@ Mitigation:
 Description: 
 Mitigation: 
 
+
 ## ToDo
 
+- find slots for the steering board meeting for march/juin/septembre/decembre
+ 
 ### Communication
-- as the new year is starting send a short thank-you message to all stackholders that have helped and support the AI Buddy project. The message should be short and inspiring. Give them of very short summary of what has been accomplished and what we plan to do this year
-- as the new year is starting send a short thank-you message to all stackholders that have helped and support the AI Buddy project. The message should be short and inspiring. Give them of very short summary of what has been accomplished and what we plan to do this year
+
+1) new year message to all supporter of the project
+    - This should short and positiv, showing our vision and will to help the student
+    - The message give them of very short summary of what has been accomplished and what we plan to do this year
+
+2) message to the stearing board
+   - as the new year is starting send a recapitulation message to the stearing board
+   - the message gives them of very short summary of what has been accomplished and what we plan to do this year
+   - the message also express my which to have Michelle Stärke part of the steering board.
+   - I should also remind the 
 - 
 ### Release communication plan
