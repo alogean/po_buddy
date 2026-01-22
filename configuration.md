@@ -48,7 +48,7 @@
     - [6.2.1 New Year Message to Supporters](#621-new-year-message-to-supporters)
     - [6.2.2 Steering Board Message](#622-steering-board-message)
   - [6.3 Release Communication Plan](#63-release-communication-plan)
-- [7. Varia](#7 varia)
+- [7. Varia](#7-varia)
 ---
 
 ## 1. System Instructions
