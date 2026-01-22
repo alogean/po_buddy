@@ -346,6 +346,7 @@ Extension to additional faculties and study programs beyond WWF.
 - [ ] Create list of faculties that have submitted their candidature
 - [ ] Analyze Gile's message and implement requested changes
 - [ ] Create inventory of all other items
+- [ ] metre à jour la page sharepoint https://uzh.sharepoint.com/sites/UZHdigital/SitePages/AI%20Buddy.aspx
 
 ### 6.2 Communication Tasks
 
@@ -422,3 +423,37 @@ Für Rückfragen oder ein kurzes Gespräch stehen wir Ihnen gerne zur Verfügung
 Mit freundlichen Grüssen,
  
 AI Buddy Projektleitung
+
+#### Message send to the WWF study program before the release AI Buddy 2.0
+
+Betreff: AI Buddy – Ihr neuer digitaler Studienbegleiter für WWF-Studierende
+
+Sehr geehrte Damen und Herren,
+
+Wir freuen uns, Ihnen AI Buddy vorzustellen, einen KI-gestützten Assistenten, der ab dem 15. Februar 2026 allen Studierenden der WWF-Fakultät zur Verfügung steht.
+
+Was ist AI Buddy?
+AI Buddy ist ein digitaler Studienbegleiter, der im Rahmen der UZH Digital Strategy Charter (https://www.digital.uzh.ch/board/index.html) der Universität Zürich entwickelt wurde. Das Tool unterstützt Bachelor- und Master-Studierende bei studienbezogenen Fragen und erleichtert den Zugang zu relevanten Informationen.
+Kernfunktionen:
+* Kurssuche: Schnelles Finden von Kursen mit Details zu ECTS, Voraussetzungen, Zeitplan und Prüfungsterminen
+* Reglement-Auskunft: Antworten auf Fragen zu Studienreglementen, Anmeldeprozessen und Fristen
+* Ressourcen-Wegweiser: Orientierung zu UZH-Dienstleistungen wie IT-Support, Beratungsangeboten und Fachvereinen
+
+Vorteile für Studierende:
+
+Rund um die Uhr verfügbar
+Schnelle, zuverlässige Antworten basierend auf offiziellen UZH-Quellen
+Einfacher Zugang über die UZH-Anmeldung (Microsoft Entra ID)
+
+Wie können Sie unterstützen?
+
+Weisen Sie Studierende auf AI Buddy hin
+Teilen Sie den Zugangslink über Ihre Kommunikationskanäle
+Geben Sie uns Feedback zur Verbesserung der Inhalte für Ihren Studiengang
+
+Weitere Informationen und Zugang: [Link einfügen]
+Für Fragen oder eine kurze Präsentation stehen wir Ihnen gerne zur Verfügung.
+Mit freundlichen Grüssen,
+Antoine
+AI Buddy Projektleitung
+Digital Society Initiative, Universität Zürich
