@@ -299,6 +299,17 @@ A survey of 926 UZH students conducted in March 2024 provided foundational evide
 | ThF/TRF | Theology and Study of Religion | Post-2.0 | TBD |
 | VSF | Vetsuisse Faculty | Post-2.0 | TBD |
 
+| Faculty | Fakultät | Dekanat | Application | Institute | Studienprogramm | Ansprechperson | Anzahl |
+|--------|----------|---------|-------------|-----------|----------------|---------------|--------|
+| WWF | Wirtschaftswissenschaftliche Fakultät | Harald C. Gall | yes |  |  |  |  |
+| VSF | Vetsuisse-Fakultät | Thomas Lutz | yes |  | Bachelor/Master Veterinärmedizin | Rutz Stefanie | 450 |
+| TRF | Theologische und Religionswissenschaftlichen Fakultät | Stefan Krauter | yes |  | Bachelor of Theology UZH | Cahn Barbara | 80 |
+| PhF | Philosophischen Fakultät | Peter Finke | (yes) | Kommunikationswissenschaft | BA KoWi Major<br>BA KoWi Minor<br>MA KoWi Major<br>MA KoWi Minor<br>MA Strat.Komm. Major<br>MA Internet & Society Mono |  |  |
+| PhF | Philosophischen Fakultät | Peter Finke | (yes) | Historisches Seminar |  |  |  |
+| MEF | Medizinische Fakultät | Christian Stockmann / Dominik Schaer | no |  |  |  |  |
+| RWF | Rechtswissenschaftliche Fakultät | Felix Bommer | no |  |  |  |  |
+| MNF | Mathematisch-naturwissenschaftliche Fakultät | Thierry Hennet | no |  |  |  |  |
+
 ### 5.3 RACI Matrix
 
 | Deliverable / Decision | Sponsor (Bernstein) | PM/PO (Antoine) | Tech Lead (Roli) | Content Lead (Johanna) | Research (Oriane) | ZI |
