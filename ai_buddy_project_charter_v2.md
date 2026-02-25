@@ -54,11 +54,17 @@ The paper identified three core functions for such an AI companion: (1) knowledg
 
 | ID | Objective | Target | Measurement | Timeline |
 |----|-----------|--------|-------------|----------|
-| OBJ-1 | Deploy AI Buddy 2.0 for the full WWF Faculty | Zero critical (P0/P1) bugs at release | Release metrics, QA gate checklist | February 15, 2026 |
+| OBJ-1 | Deploy OEC AI Buddy 2.0 for the full WWF Faculty | Zero critical (P0/P1) bugs at release | Release metrics, QA gate checklist | February 25, 2026 |
 | OBJ-2 | Achieve student adoption of >50% of WWF students | >50% registered users within first semester | Registration analytics via Entra ID | By June 2026 |
 | OBJ-3 | Attain response accuracy >90% on validated queries | >90% correct answers (>80% human agreement) | DeepEval automated pipeline + human validation | At release and ongoing |
-| OBJ-4 | Maintain full Swiss privacy compliance | Zero data breaches, GDPR audit passed | Privacy audit, consent mechanism validation | Continuous |
-| OBJ-5 | Establish a scalable faculty expansion model | 2–4 week onboarding cycle for new faculties | Onboarding Playbook validated on first expansion | March 2026+ |
+| OBJ-4 | Deploy UZH Service AI Buddy | coverage of 80% of the UZH Services | | July 2026 |
+| OBJ-5 | Deploy VET AI Buddy |  |  | Mai 2026 |
+| OBJ-6 | Deploy TRF AI Buddy |  |  | Mai 2026 |
+| OBJ-7 | Desintingling of the acutal AI Buddy repo |  |  | Mai 2026 |
+| OBJ-8 | Continuous testing from students |  |  | continuous |
+| OBJ-9 | Continuous testing from students |  |  | continuous |
+
+
 
 ### 3.2 Key Deliverables
 
